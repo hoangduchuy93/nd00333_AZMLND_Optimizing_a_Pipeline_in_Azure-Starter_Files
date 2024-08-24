@@ -19,10 +19,12 @@ This model is then compared to an Azure AutoML run.
 
 ## Scikit-learn Pipeline
 - The traditional way is to import the Logistics regression from sklearn and process the HyperDrive to find the most accurate model.
+- The dataset is cleaned first. Then split to train and test with ratio 80:20.
+- Model using: Logistics Regression
 
-- The Random Parameter Sampling will help to reduce the time and facility to train model, while there is not much dirrerent in performance
+- Benefit of sampler: The Random Parameter Sampling help to choose randomly different parameters provided. Each combination of C and max_iter will be tried to find the optimal accuracy.
 
-- Bandit early stopping helps to stop the model from being overfit by focusing on models that outperform the others. This will help to shorten training time and performance of model can be optimal.
+- Benefit of early stopping: Bandit early stopping helps to stop the training when there is not improvement in accuracy. This can help to reduce the training time and resource.
 ## AutoML
 - AutoML can automatically take the input data, then performce missing values handler, feature engineerings, hyperdrive automatically with different types of models. Some paramters of AutoML are: task (classification/ regression), training_data (the data for training), label_column_name (your target), primary_metric (metric for evaluation), n_cross_validations (k-fold cross validation), etc.
 
