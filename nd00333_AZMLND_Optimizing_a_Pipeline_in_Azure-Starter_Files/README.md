@@ -15,7 +15,7 @@ This model is then compared to an Azure AutoML run.
 ## Summary
 - The dataset is about the characteristics of customers at a bank such as age, default, loan, ... The purpose of this project is to predict if the customer will subcribe to term deposit (TD)
 
-**In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
+- The best model is Voting Ensembler
 
 ## Scikit-learn Pipeline
 - The traditional way is to import the Logistics regression from sklearn and process the HyperDrive to find the most accurate model.
@@ -29,12 +29,11 @@ This model is then compared to an Azure AutoML run.
 - AutoML can automatically take the input data, then performce missing values handler, feature engineerings, hyperdrive automatically with different types of models. Some paramters of AutoML are: task (classification/ regression), training_data (the data for training), label_column_name (your target), primary_metric (metric for evaluation), n_cross_validations (k-fold cross validation), etc.
 
 ## Pipeline comparison
-- I do not see much different between AutoML and HyperDrive manually in this case. The accuracy of HyperDrive is 0.908 while AutoML is
+- I do not see much different between AutoML and HyperDrive manually in this case. The accuracy of HyperDrive is 0.908 while AutoML is 0.918.
 - I think the gap between 2 methods are little in this case because the dataset is small, clean, and the variables are very close to target (I mean they have strong relation). In real world projects, datasets are much more complex. In real world I think AutoML will perform better, if the person do HyperDrive do not have any extra knowledge about the dataset.
 - Overall, I think AutoML is great because it can use many models, so that it can find the best one. Rather than HyperDrive in this case only use Logistics Regression. Using one model can lead to bias.
 
 ## Future work
-**What are some areas of improvement for future experiments? Why might these improvements help the model?**
 - I would try to recreate the AutoML for my real wolrd problem. Because the AutoML seems to be a black box. I do not know how can it can recoginize different data types, and have solution to handle with data as well as create new features.
 
 ## Proof of cluster clean up
