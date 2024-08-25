@@ -37,5 +37,6 @@ This model is then compared to an Azure AutoML run.
 - I would try to recreate the AutoML for my real wolrd problem. Because the AutoML seems to be a black box. I do not know how can it can recoginize different data types, and have solution to handle with data as well as create new features.
 
 ## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
+- Delete the compute cluster
+![image](https://github.com/user-attachments/assets/452c203f-5bf1-48c3-a272-a1911cb50e5b)
+
